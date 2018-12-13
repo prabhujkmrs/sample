@@ -1,10 +1,10 @@
-import java.util.*;
-import java.util.concurrent.ForkJoinPool;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Combine {
 
-    private static List<String> alpha = new ArrayList<String>();
-    private static List<Integer> num = new ArrayList<Integer>();
+    private static List<String> alpha = new ArrayList<>();
+    private static List<Integer> num = new ArrayList<>();
 
     public static void main(String[] args) {
         alpha.add("a");
@@ -14,16 +14,16 @@ public class Combine {
         num.add(1);
         num.add(2);
         num.add(3);
-        combine();
+        System.out.println(combine());
     }
 
     /**
      * combine 2 list of different data type
-     * @return
+     * @return result
      */
-    public static Object combine() {
+    private static Object combine() {
 
-        List<Object> result = new ArrayList<Object>();
+        List<Object> result = new ArrayList<>();
         for (int i = 0; i < alpha.size(); i++) {
             result.add(alpha.get(i));
             result.add(num.get(i));
