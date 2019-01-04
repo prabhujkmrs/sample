@@ -28,7 +28,6 @@ public class PopularDestinations {
                 }
                      resultMap.get(entry.getValue()).add(entry.getKey());
         }
-
         return resultMap;
     }
 }
