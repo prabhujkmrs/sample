@@ -1,3 +1,5 @@
+package com.random.questions;
+
 public class MinumumPath {
 
     public static void main(String [] args){

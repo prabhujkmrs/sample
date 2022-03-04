@@ -1,10 +1,12 @@
+package com.random.questions;
+
 import java.util.ArrayList;
 
 public class OddNumbers {
 
     public static void main(String[] args){
 
-        System.out.println(oddNumbers(1,5).length);
+        System.out.println(oddNumbers(1,7).length);
     }
 
     /**

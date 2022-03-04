@@ -1,3 +1,5 @@
+package com.random.questions;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -23,7 +25,7 @@ public class StackUsingQueue {
         obj.push(200);
         obj.push(300);
 
-        obj.pop();
+        System.out.println(obj.top());
 
     }
 

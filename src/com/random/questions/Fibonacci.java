@@ -1,3 +1,5 @@
+package com.random.questions;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -6,13 +8,13 @@ public class Fibonacci {
     private static Map<Integer,Integer> map = new HashMap<Integer,Integer>();
     public static void main(String [] args){
 
-        System.out.println("Fibonacci normal implementation");
+        System.out.println("com.random.questions.Fibonacci normal implementation");
         fibonacci(10);
-        System.out.println("Fibonacci using Recursion");
+        System.out.println("com.random.questions.Fibonacci using Recursion");
         System.out.println(fibonacciRecursion(10));
         System.out.println("Three number add");
         fibonacciThreeNumberAdd(10);
-        System.out.println("Fibonacci Memoize");
+        System.out.println("com.random.questions.Fibonacci Memoize");
         System.out.println(fibonacciMemoize(10));
     }
 

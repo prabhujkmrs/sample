@@ -1,0 +1,148 @@
+<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:prefix1="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/getaccountbalanceresponsev01" xmlns:prefix3="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/gettransactionsresponsev01" xmlns:prefix2="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/getpersonaldetailsresponsev01">
+    <grammars>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/getaccountbalanceresponsev01" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/getaccountbalanceresponsev01">
+            <xs:element name="GetAccountBalanceResponse" type="tns:GetAccountBalanceResponse"/>
+            <xs:complexType name="Account">
+                <xs:sequence>
+                    <xs:element name="accountType" type="tns:AccountTypeEnum"/>
+                    <xs:element name="accountStatus" type="xs:string"/>
+                    <xs:element name="balance" type="tns:Balance"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Balance">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="amount" type="xs:int"/>
+                    <xs:element minOccurs="0" name="currency" type="tns:Currency"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Currency">
+                <xs:sequence>
+                    <xs:element name="currencyCode" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Self">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="href" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetAccountBalanceResponse">
+                <xs:sequence>
+                    <xs:element name="account" type="tns:Account"/>
+                    <xs:element minOccurs="0" name="self" type="tns:Self"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="AccountTypeEnum">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="HOUSEHOLD"/>
+                    <xs:enumeration value="INDIVIDUAL"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="GetAccountBalanceResponse" type="tns:GetAccountBalanceResponse"/>
+        </xs:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/gettransactionsresponsev01" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/gettransactionsresponsev01">
+            <xs:element name="GetTransactionsResponse" type="tns:GetTransactionsResponse"/>
+            <xs:complexType name="Transaction">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="creditTransaction" type="tns:TransactionDetails"/>
+                    <xs:element minOccurs="0" name="debitTransaction" type="tns:TransactionDetails"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TransactionDetails">
+                <xs:sequence>
+                    <xs:element name="dateMade" type="xs:dateTime"/>
+                    <xs:element name="description" type="xs:string"/>
+                    <xs:element name="amount" type="tns:Amount"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Amount">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="amount" type="xs:int"/>
+                    <xs:element minOccurs="0" name="currency" type="tns:Currency"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Currency">
+                <xs:sequence>
+                    <xs:element name="currencyCode" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetTransactionsResponse">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="transaction" nillable="true" type="tns:Transaction"/>
+                    <xs:element minOccurs="0" name="self" type="tns:Self"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Self">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="href" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="GetTransactionsResponse" type="tns:GetTransactionsResponse"/>
+        </xs:schema>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/getpersonaldetailsresponsev01" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.ba.com/schema/aviosloyaltyapp/aviosloyaltyadapterv01/getpersonaldetailsresponsev01">
+            <xs:element name="GetPersonalDetailsResponse" type="tns:GetPersonalDetailsResponse"/>
+            <xs:complexType name="Name">
+                <xs:sequence>
+                    <xs:element name="title" type="xs:string"/>
+                    <xs:element name="firstName" type="xs:string"/>
+                    <xs:element name="familyName" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Member">
+                <xs:sequence>
+                    <xs:element name="person" type="tns:Person"/>
+                    <xs:element minOccurs="0" name="self" type="tns:Self"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Person">
+                <xs:sequence>
+                    <xs:element name="name" type="tns:Name"/>
+                    <xs:element minOccurs="0" name="dateOfBirth" type="xs:date"/>
+                    <xs:element minOccurs="0" name="gender" type="tns:GenderEnum"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Self">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="href" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="GetPersonalDetailsResponse">
+                <xs:sequence>
+                    <xs:element name="member" type="tns:Member"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:simpleType name="GenderEnum">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="MALE"/>
+                    <xs:enumeration value="FEMALE"/>
+                    <xs:enumeration value="UNKNOWN"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:element name="GetPersonalDetailsResponse" type="tns:GetPersonalDetailsResponse"/>
+        </xs:schema>
+    </grammars>
+    <resources base="http://caws07-e2e01.baplc.com/aviosloyaltyapp-alad/rs/v1/">
+        <resource path="/customeraccounts">
+            <resource path="/balances">
+                <method name="GET">
+                    <response>
+                        <representation mediaType="application/json;charset=UTF-8" element="prefix1:GetAccountBalanceResponse"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="/personaldetails">
+                <method name="GET">
+                    <response>
+                        <representation mediaType="application/json;charset=UTF-8" element="prefix2:GetPersonalDetailsResponse"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="/transactions">
+                <method name="GET">
+                    <response>
+                        <representation mediaType="application/json;charset=UTF-8" element="prefix3:GetTransactionsResponse"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+    </resources>
+</application>

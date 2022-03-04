@@ -1,3 +1,5 @@
+package com.random.questions;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 

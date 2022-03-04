@@ -1,3 +1,5 @@
+package com.random.questions;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -5,7 +7,7 @@ public class NonRepeatingFirstChar {
 
     public static void main(String[] args){
 
-        System.out.println(nonRepeatingFirstChar("XaapplleeY"));
+        System.out.println(nonRepeatingFirstChar("xxaappllee"));
     }
 
     public static String nonRepeatingFirstChar(String input){

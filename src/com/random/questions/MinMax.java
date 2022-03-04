@@ -1,3 +1,5 @@
+package com.random.questions;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,13 +10,14 @@ public class MinMax {
         List<Double> values = new ArrayList<>();
         values.add(1.2);
         values.add(2.0);
+        values.add(4.5);
         values.add(3.5);
-        minmax(values);
+        System.out.println(minmax(values));
     }
 
-    public static double[] minmax(List<Double> values) {
+    public static String minmax(List<Double> values) {
         if (values.size() == 0) {
-            return new double[2];
+            return "Empty list";
         }
         double min = values.get(0);
         double max = min;
@@ -24,7 +27,7 @@ public class MinMax {
             min = Math.min(min, value);
             max = Math.max(max, value);
         }
-        return new double[] { min, max };
+        return "min="+min+"\n"+"max="+ max;
     }
 
 }

@@ -1,3 +1,5 @@
+package com.random.questions;
+
 import java.util.*;
 
 public class PopularDestinations {

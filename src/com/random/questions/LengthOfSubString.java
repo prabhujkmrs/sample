@@ -1,3 +1,5 @@
+package com.random.questions;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -5,7 +7,7 @@ public class LengthOfSubString {
 
     public static void main(String[] args){
 
-        System.out.println(lengthOfSub(Arrays.asList(1,2,3,1,2)));
+        System.out.println(lengthOfSub(Arrays.asList(1,2,3,-4,-3,-2,-1)));
 
     }
 

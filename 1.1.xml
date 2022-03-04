@@ -1,0 +1,40 @@
+[TYPE+EXTERNALERROR|request=<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header/>
+    <soap:Body>
+        <ns2:CreateRewardUnitsTransactionRequest
+                xmlns:ns2="http://www.ba.com/schema/redemption/bls/tCreateRewardUnitsTransactionV1C">
+            <MessageHeader>
+                <OriginatingSystem>EZR</OriginatingSystem>
+                <OriginatingUser>baecp</OriginatingUser>
+                <OriginatingTransaction>998567345248</OriginatingTransaction>
+            </MessageHeader>
+            <CAPHeader/>
+            <SchemeNumber>10429844</SchemeNumber>
+            <FullName>
+                <FirstName>KevinMarshT</FirstName>
+                <LastName>Silver</LastName>
+            </FullName>
+            <LoyaltyTransaction>
+                <PartnerCode>EZR</PartnerCode>
+                <TransactionType>REDEMPTION</TransactionType>
+                <NonFlightPNR>308135814</NonFlightPNR>
+                <ProductCode>HOTEL</ProductCode>
+                <StartDateTime>2018-08-23T02:49:45.000Z</StartDateTime>
+                <EndDateTime>2018-09-19T00:18:33.000Z</EndDateTime>
+                <Amount>1000</Amount>
+            </LoyaltyTransaction>
+        </ns2:CreateRewardUnitsTransactionRequest>
+    </soap:Body>
+</soap:Envelope>|response=<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Header>
+</soap:Header>
+<soap:Body>
+    <soap:Fault>
+        <faultcode>soap:Client</faultcode>
+        <faultstring>RUNTIME0031: Failed to locate the operation for this SOAP call.</faultstring>
+    </soap:Fault>
+</soap:Body>
+</soap:Envelope>
+
+        com.ba.captwo.framework.rs.generic.SessionDataForwarding [txId=tx-07-201-87dcbd7d-4dd2-42a9-ab0e-e96b5f5371f9|client=AviosLoyaltyApp|entryService=(POST)/aviosloyaltyapp-alad/rs/v1/transactions|callingService=] [] [Attempt to call CAPTWO AI without a sid/pwd]
