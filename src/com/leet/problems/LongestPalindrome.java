@@ -1,7 +1,29 @@
-package com.jpmc.questions;
+package com.leet.problems;
 
 import java.util.HashSet;
 import java.util.Set;
+
+/***
+ * Length of the longest palindromic substring
+ * leetcode => https://leetcode.com/problems/longest-palindrome/
+ *
+ * Example 1:
+ *
+ * Input: s = "abccccdd"
+ * Output: 7
+ * Explanation:
+ * One longest palindrome that can be built is "dccaccd", whose length is 7.
+ * Example 2:
+ *
+ * Input: s = "a"
+ * Output: 1
+ * Example 3:
+ *
+ * Input: s = "bb"
+ * Output: 2
+ *
+ * Hint : Add all chars to Set that doesn't have duplicates.
+ */
 
 public class LongestPalindrome {
     public int longestPalindrome(String s) {

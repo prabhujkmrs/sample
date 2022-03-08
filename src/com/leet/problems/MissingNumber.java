@@ -1,6 +1,10 @@
-package com.jpmc.questions;
+package com.leet.problems;
 
 import java.util.Arrays;
+
+/***
+ * Find the missing number in an array of n
+ */
 
 public class MissingNumber {
 

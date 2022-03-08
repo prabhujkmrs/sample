@@ -1,4 +1,4 @@
-package com.jpmc.questions;
+package com.leet.problems;
 
 import java.util.Arrays;
 import java.util.Comparator;

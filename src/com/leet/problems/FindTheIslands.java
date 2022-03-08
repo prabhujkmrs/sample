@@ -1,4 +1,4 @@
-package com.jpmc.questions;
+package com.leet.problems;
 
 /**
  * Find the number of islands (Using DFS or BFS)

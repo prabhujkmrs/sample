@@ -1,4 +1,4 @@
-package com.jpmc.questions;
+package com.leet.problems;
 
 
 public class BuySellStock {

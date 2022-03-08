@@ -1,4 +1,4 @@
-package com.jpmc.questions;
+package com.leet.problems;
 
 
 public class JumpGame {
@@ -43,16 +43,16 @@ public class JumpGame {
 
     public int countJump(int[] nums){
         int res = 0;
-        int l=0;
-        int r=0;
+        int start=0;
+        int end=0;
 
-        while(r < nums.length -1){
+        while(end < nums.length -1){
             int farthest = 0;
-            for(int i = l; i < r+1; i++){
+            for(int i = start; i < end+1; i++){
                 farthest = Math.max(farthest, i + nums[i]);
             }
-            l = r + 1;
-            r = farthest;
+            start = end + 1;
+            end = farthest;
             res = res + 1;
         }
 
